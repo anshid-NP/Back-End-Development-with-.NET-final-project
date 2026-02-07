@@ -1,0 +1,19 @@
+### Health (no token required)
+GET http://localhost:5231/health
+
+### Users with valid token
+GET http://localhost:5231/users
+Authorization: Bearer secret-token-123
+
+### Users with invalid token
+GET http://localhost:5231/users
+Authorization: Bearer wrong-token
+
+### Users with missing token
+GET http://localhost:5231/users
+
+### Trigger unhandled exception
+GET http://localhost:5231/crash
+Authorization: Bearer secret-token-123
+
+
